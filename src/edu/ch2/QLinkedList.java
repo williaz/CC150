@@ -118,7 +118,7 @@ public class QLinkedList {
 	
 		
 	}
-	
+	//2.5
 	public static LinkedList<Integer> sumDigit(LinkedList<Integer> x,LinkedList<Integer> y)
 	{
 		LinkedList<Integer> sum=new LinkedList<Integer>();
@@ -190,6 +190,34 @@ public class QLinkedList {
 		
 		return sum;
 	}
+	//2.6
+	//how to know they are duplicates or loop
+	//construct loop linkedlist
+	
+	//2.7
+	public static<T> boolean isPalindrome(LinkedList<T> ll)
+	{
+		
+		Iterator<T> iFront=ll.iterator();
+		Iterator<T> iEnd=ll.descendingIterator();
+		T x,y;
+		
+		while(iFront.hasNext())
+		{
+			x=iFront.next();
+			y=iEnd.next();
+			if(!x.equals(y))
+				return false;
+			
+			//can break half way
+			
+		}
+		
+		return true;
+		
+	}
+	
+	
 
 	public static void main(String[] args) {
 		/*// TODO Auto-generated method stub
@@ -226,16 +254,18 @@ public class QLinkedList {
 		System.out.println(x+" + "+y+" = "+QLinkedList.sumDigit(x, y));*/
 		
 		LinkedList<Integer> x=new LinkedList<Integer>();
-		x.addFirst(6);
+		x.addFirst(7);
+		x.addFirst(5);
 		x.addFirst(1);
+		x.addFirst(3);
 		x.addFirst(7);
 		LinkedList<Integer> y=new LinkedList<Integer>();
 		y.addFirst(2);
 		y.addFirst(9);
 		y.addFirst(5);
 		
-		System.out.println(x+" + "+y+" = "+QLinkedList.sumDigitTail(x, y));
-		
+		//System.out.println(x+" + "+y+" = "+QLinkedList.sumDigitTail(x, y));
+		System.out.println(x+" ? "+QLinkedList.isPalindrome(x));
 
 	}
 
