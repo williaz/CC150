@@ -38,7 +38,7 @@ public class QStack {
 		
 		System.out.println(ss);*/
 		
-		Integer[] l={1,2,3,4,5};
+	/*	Integer[] l={1,2,3,4,5};
 		
 		MyQueue<Integer> qq=new MyQueue<Integer> ();
 		
@@ -48,7 +48,29 @@ public class QStack {
 		qq.poll();
 		
 		System.out.println(qq.peek());
-
+		
+	 */
+		
+		AnimalShelter as=new AnimalShelter();
+		Cat c=new Cat();
+		Cat c1=new Cat();
+		Cat c2=new Cat();
+		
+		Dog d=new Dog();
+		Dog d1=new Dog();
+		Dog d2=new Dog();
+		
+		System.out.println(c.getClass().getSimpleName());
+		
+		as.enqueue(c);
+		as.enqueue(d2);
+		as.enqueue(d);
+		as.enqueue(c1);
+		
+		Animal x=as.dequeueDog();
+		System.out.println(x==null);
+		x.bark();
+		
 	}
 
 }
