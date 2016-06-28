@@ -24,7 +24,7 @@ public class QStack {
 		x.push(66);
 		System.out.println(x.peek());*/
 		
-		SetOfStack<Integer> ss=new SetOfStack<Integer>();
+		/*SetOfStack<Integer> ss=new SetOfStack<Integer>();
 		ss.push(4);
 		ss.push(2);
 		ss.push(7);
@@ -36,8 +36,18 @@ public class QStack {
 		
 		ss.popAt(1);
 		
-		System.out.println(ss);
+		System.out.println(ss);*/
 		
+		Integer[] l={1,2,3,4,5};
+		
+		MyQueue<Integer> qq=new MyQueue<Integer> ();
+		
+		qq.offer(1);
+		qq.offer(2);
+		qq.offer(3);
+		qq.poll();
+		
+		System.out.println(qq.peek());
 
 	}
 
